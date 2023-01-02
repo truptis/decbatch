@@ -1,0 +1,13 @@
+---
+- hosts: group1
+  become: true
+  name: Play 1
+  tasks:
+     - name: Install nginx
+       apt: name=nginx state=latest
+- hosts: group2
+  become: true
+  name: Play 1
+  tasks:
+     - name: Install tomcat
+       apt: name=tomcat state=latest
